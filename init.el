@@ -14,6 +14,8 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+(setq ns-right-alternate-modifier nil) ; https://stackoverflow.com/questions/11127224/how-to-write-a-tilde-character-in-emacs-on-mac-os-x/33599236
+
 ;; Set UI
 (set-face-attribute 'default nil :height 150) ; Set font
 (load-theme 'tango-dark) ; Set theme
@@ -23,7 +25,7 @@
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
+                         ("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
 (unless package-archive-contents
